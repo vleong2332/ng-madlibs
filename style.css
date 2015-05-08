@@ -48,6 +48,11 @@ h1 {
 #words, #story {
 	padding: 1rem 4rem 4rem;
 }
+.row {
+	width: 100%;
+	padding-left: 1rem;
+	margin-bottom: 1rem;
+}
 .col {
 	display: inline-block;
 	width: 33.33%;
