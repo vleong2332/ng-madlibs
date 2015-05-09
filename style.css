@@ -52,6 +52,7 @@ h1 {
 	width: 100%;
 	padding-left: 1rem;
 	margin-bottom: 1rem;
+	clear: both;
 }
 .col {
 	display: inline-block;
@@ -65,4 +66,16 @@ input {
 p {
 	font-size: 1.25rem;
 	line-height: 1.4;
+}
+.submit {
+	text-align: right;
+	padding-right: 1.5rem;
+	padding-top: 1rem;
+}
+
+.ng-submitted .ng-invalid {
+	border: 1px solid red;
+}
+.error {
+	color: indianred;
 }
