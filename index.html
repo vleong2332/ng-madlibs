@@ -25,8 +25,8 @@
 		<section id="words" >
 			<h2>Provide the following words:</h2>
 			<div class="row">
-				<input type="radio" name="gender" value="M" ng-model="gender" checked>Male
-				<input type="radio" name="gender" value="F" ng-model="gender">Female
+				<input type="radio" name="gender" value="M" ng-model="gender" ng-click="changeToMale()" checked>Male
+				<input type="radio" name="gender" value="F" ng-model="gender" ng-click="changeToFemale()">Female
 			</div>
 			<div class="col">
 				<input type="text" ng-model="name"        placeholder="name" />
@@ -47,33 +47,12 @@
 
 		<section id="story">
 			<p>
-				<u>{{name || "name"}}</u> was a
-				<u>{{jobTitle || "jobTitle"}}</u> who loved technology. Although
-				<span ng-if="gender=='F'">she</span>
-				<span ng-if="gender=='M'">he</span> loved parts of
-				<span ng-if="gender=='F'">her</span>
-				<span ng-if="gender=='M'">his</span> job,
-				<span ng-if="gender=='F'">she</span>
-				<span ng-if="gender=='M'">he</span>	absolutely hated
-				<u>{{tediousTask || "tediousTask"}}</u> and
-				<u>{{dirtyTask || "dirtyTask"}}</u>. So,
-				<u>{{name || "name"}}</u> met with
-				<span ng-if="gender=='F'">her</span>
-				<span ng-if="gender=='M'">his</span> life mentor
-				<u>{{celebrity || "celebrity"}}</u> who told
-				<span ng-if="gender=='F'">her</span>
-				<span ng-if="gender=='M'">him</span> to learn how to
+				<u>{{name || "name"}}</u> was a	<u>{{jobTitle || "jobTitle"}}</u> who loved technology. Although {{ firstPro }} loved parts of <u>{{ possPro }} job,	{{ firstPro }}</u> absolutely hated <u>{{tediousTask || "tediousTask"}}</u> and <u>{{dirtyTask || "dirtyTask"}}</u>. So, <u>{{name || "name"}}</u> met with	<u>{{ possPro }}</u> life mentor <u>{{celebrity || "celebrity"}}</u> who told	{{ secondPro }} to learn how to
 				<u>{{uselessSkill || "uselessSkill"}}</u> with Thinkful. Thinkful didn't offer a course on
 				<u>{{uselessSkill || "uselessSkill"}}</u> so he studied programming instead.</p>
 
-				<p>What a great decision! With
-				<span ng-if="gender=='F'">her</span>
-				<span ng-if="gender=='M'">his</span> new skills,
-				<u>{{name || "name"}}</u> built a(n)
-				<u>{{adjective || "adjective"}}</u> robot named
-				<u>{{obnoxCeleb || "obnoxCeleb"}}</u> that not only loved
-				<u>{{dirtyTask || "dirtyTask"}}</u> but did it
-				<u>{{hugeNumber || "hugeNumber"}}</u> faster.
+				<p>What a great decision! With {{ possPro }} new skills, <u>{{name || "name"}}</u> built a(n)
+				<u>{{adjective || "adjective"}}</u> robot named	<u>{{obnoxCeleb || "obnoxCeleb"}}</u> that not only loved	<u>{{dirtyTask || "dirtyTask"}}</u> but did it<u>{{hugeNumber || "hugeNumber"}}</u> faster.
 			</p>
 		</section>
 	</div>
