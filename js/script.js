@@ -1,6 +1,6 @@
 var App = angular.module('madLibs', ['ngMessages']);
 App.controller('madLibsCtrl', function($scope) {
-	$scope.view = "story";
+	$scope.view = "words";
 
 	$scope.gender = "M";
 	$scope.firstPro  = "he";
