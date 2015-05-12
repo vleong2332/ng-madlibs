@@ -1,4 +1,4 @@
-var App = angular.module('madLibs', ['ngMessages']);
+var App = angular.module('madLibs', ['ngMessages', 'ngAnimate']);
 App.controller('madLibsCtrl', function($scope) {
 	$scope.view = "words";
 

@@ -3,9 +3,10 @@
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 }
-body {
+#container {
 	width: 800px;
 	margin: 1rem auto;
+	position: relative;
 }
 section {
 	border: 2px solid black;
@@ -47,6 +48,8 @@ h1 {
 }
 #words, #story {
 	padding: 1rem 4rem 4rem;
+	width: 100%;
+	position: absolute;
 }
 .row {
 	width: 100%;
@@ -78,4 +81,60 @@ p {
 }
 .error {
 	color: indianred;
+}
+
+/*===================*/
+/*     ANIMATION     */
+/*===================*/
+.panel.ng-hide-add, .panel.ng-hide-remove {
+	        transition: 0s linear all;
+	     -o-transition: 0s linear all;
+	   -moz-transition: 0s linear all;
+	-webkit-transition: 0s linear all;
+}
+.panel.ng-hide-add-active, .panel.ng-hide-remove-active,
+.error-div
+ {
+	        transition: 0.5s ease-out all;
+	     -o-transition: 0.5s ease-out all;
+	   -moz-transition: 0.5s ease-out all;
+	-webkit-transition: 0.5s ease-out all;
+}
+
+
+#story.ng-hide-add,
+#story.ng-hide-remove.ng-hide-remove-active {
+	position: absolute;
+	left: 0;
+	opacity: 1;
+}
+#story.ng-hide-remove,
+#story.ng-hide-add.ng-hide-add-active {
+	position: absolute;
+	left: -800px;
+	opacity: 0;
+}
+
+#words.ng-hide-add,
+#words.ng-hide-remove.ng-hide-remove-active {
+	position: absolute;
+	left: 0;
+	opacity: 1;
+}
+#words.ng-hide-remove,
+#words.ng-hide-add.ng-hide-add-active {
+	position: absolute;
+	left: 800px;
+	opacity: 0;
+}
+
+
+.error-div {
+	margin-bottom: 40px;
+}
+.error-div.ng-inactive {
+	margin-top: -10px;
+}
+.error-div.ng-active {
+	margin-top: 20px;
 }
