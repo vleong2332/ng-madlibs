@@ -54,5 +54,7 @@ App.controller('madLibsCtrl', function($scope) {
 		$scope.obnoxCeleb   = "";
 		$scope.hugeNumber   = "";
 		$scope.adjective    = "";
+		$scope.madlibsWords.$setPristine();
+		$scope.madlibsWords.$setUntouched();
 	}
 });

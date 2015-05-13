@@ -93,7 +93,7 @@ p {
 	-webkit-transition: 0s linear all;
 }
 .panel.ng-hide-add-active, .panel.ng-hide-remove-active,
-.error-div
+.error, .error-div
  {
 	        transition: 0.5s ease-out all;
 	     -o-transition: 0.5s ease-out all;
@@ -128,13 +128,28 @@ p {
 	opacity: 0;
 }
 
-
-.error-div {
-	margin-bottom: 40px;
+.error-div p {
+	margin: 3px 0;
 }
 .error-div.ng-inactive {
-	margin-top: -10px;
+	opacity: 0;
 }
 .error-div.ng-active {
-	margin-top: 20px;
+	opacity: 1;
+}
+
+.error.ng-enter,
+.error.ng-leave.ng-leave-active {
+	opacity: 0;
+	-webkit-margin-before: -1em;
+}
+.error.ng-leave,
+.error.ng-enter.ng-enter-active {
+	opacity: 1;
+	-webkit-margin-before: 0;
+}
+
+p{ 
+	-webkit-margin-before: 0;
+  -webkit-margin-after: 0;
 }
